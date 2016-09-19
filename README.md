@@ -6,7 +6,10 @@
 <p>"Essential" page would contain some but not all stuff in the chapter which I personally think important. "Exercises" page would be my personal coding ideas for each exercise. Both of these pages need your comments and improvements, feel free code it!</p>
 <p>Hope I could learn a lot from you, from this book and this process. Go Coding!
 <h2>Content</h2>
+<ol>
 <li>Chapter 1 (Python Primer)</li>
-<a href="https://github.com/kellerliu666/Data-Structures-and-Algorithms-in-Python/blob/master/1-Python-Primer-Essential.py">Essential</a>
+<ul><li><a href="https://github.com/kellerliu666/Data-Structures-and-Algorithms-in-Python/blob/master/1-Python-Primer-Essential.py">Essential</a></li></ul>
+<li>Chapter 2 (Object-Oriented Programming)</li>
+</ol>
 </body>
 </html>
