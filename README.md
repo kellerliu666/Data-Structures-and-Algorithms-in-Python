@@ -1,6 +1,6 @@
 <html>
 <body>
-<h1>Data Structures and Algorithms in Python</h1>
+<h2>Data Structures and Algorithms in Python</h2>
 <p>Python is a wonderful language. I'm going to read over this book, and put something down here.</p>
 <p>I'll try to make an "esssential" page and an "exercises" page for each chapter.</p>
 <p>"Essential" page would contain some but not all stuff in the chapter which I personally think important. "Exercises" page would be my personal coding ideas for each exercise. Both of these pages need your comments and improvements, feel free code it!</p>
