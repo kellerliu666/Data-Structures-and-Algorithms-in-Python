@@ -54,7 +54,7 @@ yes = 0
 while True:
     if loop == 0: break
     birthlst = list()
-    n = 23
+    n = 23                                          # You can put any integer here, 23 is for probability 0.5
     while True:
         if n == 0: break
         date = random.randint(1, 365)
