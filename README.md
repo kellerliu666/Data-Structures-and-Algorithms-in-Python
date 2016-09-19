@@ -11,6 +11,7 @@
 <ul><li><a href="https://github.com/kellerliu666/Data-Structures-and-Algorithms-in-Python/blob/master/1-Python-Primer-Essential.py">Essential</a></li></ul>
 <ul><li><a href="https://github.com/kellerliu666/Data-Structures-and-Algorithms-in-Python/blob/master/1-Python-Primer-Exercises.py">Exercises</a></li></ul>
 <li>Chapter 2 (Object-Oriented Programming)</li>
+<ul><li><a href="https://github.com/kellerliu666/Data-Structures-and-Algorithms-in-Python/blob/master/2-Object-Oriented-Programming-Essential.py">Essential</a></li></ul>
 </ol>
 </body>
 </html>
