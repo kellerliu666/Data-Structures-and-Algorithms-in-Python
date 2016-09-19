@@ -1,3 +1,5 @@
-# 1.1 Write a short Python function, is multiple(n, m), that takes two integer
-#     values and returns True if n is a multiple of m, that is, n = mi for some
-#     integer i, and False otherwise.
+#--------------------------------------------------------------------------------------------------------------
+# Demonstrate how to use Python’s list comprehension syntax to produce the [1, 2, 4, 8, 16, 32, 64, 128, 256].
+print [2**a for a in range(0, 9)]
+
+#--------------------------------------------------------------------------------------------------------------
