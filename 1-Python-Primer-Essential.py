@@ -1,5 +1,5 @@
 
-Chapter One -- Python Primer
+Chapter 1 Python Primer
 
 # Be aware, some methods, like <sorted(list)>, only made a sorted copy from data and returned the sorted copy. 
 # However, some methods, like <list.sort()>, changed data itself.</p>
