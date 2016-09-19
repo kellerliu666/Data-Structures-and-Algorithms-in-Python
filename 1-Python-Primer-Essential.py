@@ -14,7 +14,7 @@ Chapter 1 Python Primer
 
 
 # Some methods that don't change original data.
->>> import string
+>>> import string                       # Import Module
 >>> a_str = 'aaaabbbbbccc'
 >>> table = string.maketrans('c', 'a')
 >>> print a_str.translate(table)
@@ -65,3 +65,24 @@ print prime_list
     
 >>> 20
 [2, 3, 5, 7, 11, 13, 17, 19]
+
+# Conditional Expression syntax can be a simple control structure.
+Return True if data == target else False
+
+
+# Comprehension Syntax could be effective as well.
+[n*n for n in list]       # Return a list
+(n*n for n in list)       # Return a generator
+{n*n for n in list}       # Return a set
+
+
+# Python can also generate random number or pick up a number randomly from a sequence.
+>>> import random                # Import Module
+>>> print random.randint(1,10)
+6                                # Answer here could be any integer randomly between 1 and 10
+>>> a_lst = [3, 5, 7]
+>>> print random.choice(a_lst)
+5                                # Answer here could be randomly from 3, 5 or 7
+>>> random.shuffle(a_lst)
+>>> print a
+[9, 3, 4]                        # Method here shuffles the given sequence
