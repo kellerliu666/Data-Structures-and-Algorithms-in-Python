@@ -14,7 +14,7 @@ def make_payment():
 # Here is a simple and basic example of creating class, which is CreditCard:
 class CreditCard:    
     def __init__(self, name, bank, account, limit):
-        self._name = name
+        self._name = name        # Differ to name, _name indicate that it's nonpublic 
         self._bank = bank
         self._account = account
         self._limit = limit
