@@ -42,10 +42,11 @@ class BankAccount:
         """Returns the total fees ever deducted from the account."""
         return self.fee_count*5
         
-my_account = BankAccount(10)
-my_account.withdraw(15)
-my_account.deposit(20)
-print my_account.get_balance(), my_account.get_fees()
+>>> my_account = BankAccount(10)
+>>> my_account.withdraw(15)
+>>> my_account.deposit(20)
+>>> print my_account.get_balance(), my_account.get_fees()
+10 5   # balance is $10, total fee is $5 
 
 #--------------------------------------------------------------------------------------------------------------
 #
