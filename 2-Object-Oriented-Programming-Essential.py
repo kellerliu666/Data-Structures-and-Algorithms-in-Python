@@ -14,7 +14,7 @@ def make_payment():
 # Here is a simple and basic example of creating class, which is BankAccount:
 class BankAccount:
     """ Class definition modeling the behavior of a simple bank account """
-    count = 0
+    fee_count = 0
     def __init__(self, initial_balance):
         self.initial_balance = initial_balance
         """Creates an account with the given balance."""
@@ -32,7 +32,7 @@ class BankAccount:
         self.initial_balance -= amount
         if self.initial_balance < 0:
             self.initial_balance -= 5
-            self.count += 1
+            self.fee_count += 1
             
     def get_balance(self):
         """Returns the current balance in the account."""
@@ -40,7 +40,7 @@ class BankAccount:
         
     def get_fees(self):
         """Returns the total fees ever deducted from the account."""
-        return self.count*5
+        return self.fee_count*5
         
 my_account = BankAccount(10)
 my_account.withdraw(15)
