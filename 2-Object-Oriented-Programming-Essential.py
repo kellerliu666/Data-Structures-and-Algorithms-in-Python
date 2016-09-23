@@ -49,4 +49,10 @@ class BankAccount:
 10 5   # balance is $10, total fee is $5 
 
 #--------------------------------------------------------------------------------------------------------------
+# Testing is important. Generally, we use 'if' sentence below to start a testing:
+if __name__ == '__main__': 
+# So that testing content will be executed when Python is invoked directly on this module, but not when the module is 
+# imported for use in a larger software project.
+
+#--------------------------------------------------------------------------------------------------------------
 #
