@@ -123,10 +123,11 @@ class Range:
 
 # There is another way to achive this iterator, by using __iter__ and __next__.
 class Iterator:
-    def __init__(self, start, stop, step=1):
+    def __init__(self, start, stop):
         self.start = start
         self.stop = stop
-        self.step = step
+    def next_method(self):
+        self.start += 1
     def __iter__(self):
         return self
     def __next__(self):
@@ -134,11 +135,39 @@ class Iterator:
             raise StopIteration
         else:
             result = self.start
-            self.start += self.step
+            self.next_method()   
             return result
 
 #--------------------------------------------------------------------------------------------------------------
-#      
-      
+# Example of the use of inheritance, continue using class Iterator.
+class SimpleIter(Iterator):
+    def __init__(self, start, stop, step):
+        Iterator.__init__(self, start, stop)
+        self.step = step
+    def next_method(self):
+        self.start += self.step
+        
+class MultiIter(Iterator):
+    def __init__(self, start, stop, base):
+        Iterator.__init__(self, start, stop)
+        self.base = base
+    def next_method(self):
+        self.start *= self.base
+        
+# By using iteration and inheritance, we can do a lot intersting sequence, like "Fibonacci".
+class Fibonacci(Iterator):
+    def __init__(self, start, stop, second=1):
+        Iterator.__init__(self, start, stop)
+        self.second = second
+    def next_method(self):
+        temp = self.start
+        self.start = self.second
+        self.second = temp + self.second
+
+>>> print [i for i in Fibonacci(0, 10000, 1)]
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765]
+
+#--------------------------------------------------------------------------------------------------------------
+#
       
       
