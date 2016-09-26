@@ -156,7 +156,7 @@ class MultiIter(Iterator):
         
 # By using iteration and inheritance, we can do a lot intersting sequence, like "Fibonacci".
 class Fibonacci(Iterator):
-    def __init__(self, start, stop, second=1):
+    def __init__(self, start, stop, second):
         Iterator.__init__(self, start, stop)
         self.second = second
     def next_method(self):
