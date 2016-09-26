@@ -101,4 +101,44 @@ if __name__ == '__main__':
     print Gr     # print out <6,8>
     
 #--------------------------------------------------------------------------------------------------------------
-#
+# Another example by creating iteration class Range (similar to built-in range). In this method, __len__ and
+# __getitem__ are essential.
+class Range:
+    def __init__(self, start, stop = None, step = 1):
+        if step == 0:
+            raise ValueError('Step cannot be 0')
+        if stop is None:
+            start, stop = 0, start
+        self.start = start
+        self.stop = stop
+        self.step = step
+    def __len__(self):
+        return (self.stop - self.start + self.step - 1) // self.step
+    def __getitem__(self, k):
+        if k < 0:
+            k = len(self) - 1 + k     # Convert negative k to be reasonable
+        if not 0 <= k < len(self):
+            raise IndexError('Out of range')
+        return self.start + (k * self.step)
+
+# There is another way to achive this iterator, by using __iter__ and __next__.
+class Iterator:
+    def __init__(self, start, stop, step=1):
+        self.start = start
+        self.stop = stop
+        self.step = step
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.start >= self.stop:
+            raise StopIteration
+        else:
+            result = self.start
+            self.start += self.step
+            return result
+
+#--------------------------------------------------------------------------------------------------------------
+#      
+      
+      
+      
