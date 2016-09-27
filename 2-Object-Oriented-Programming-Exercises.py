@@ -34,3 +34,24 @@ if __name__ == '__main__':
     b.set_petals(9)
     b.get_petals()
 
+#--------------------------------------------------------------------------------------------------------------   
+# revise the charge and make_payment methods of the CreditCard class to ensure that the caller sends a number
+# as a parameter. Raises a ValueError if a negative value is sent to make_payment method.
+def charge(self, price):
+    if not isinstance(price, (int, float)):
+        raise TypeError('Must be number!')
+    if price + self.balance > self.limit: 
+        return False                     
+    else:
+        self.balance += price
+        return True
+
+def make_payment(self, amount):
+    if not isinstance(amount, (int, float)):
+        raise TypeError('Must be number!')
+    elif amount < 0:
+        raise ValueError('Must be positive!')
+    self.balance −= amount
+    
+#--------------------------------------------------------------------------------------------------------------   
+#
