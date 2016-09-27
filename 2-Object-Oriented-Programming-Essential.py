@@ -168,6 +168,41 @@ class Fibonacci(Iterator):
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181, 6765]
 
 #--------------------------------------------------------------------------------------------------------------
-#
+# Copy can be very useful if we want to change a duplicated sequence without changing the original one.
+>>> a = [1,2]
+>>> b = a
+>>> b.append(3)
+>>> print a
+[1, 2, 3]
+>>> print b
+[1, 2, 3]
+>>> import copy
+>>> a = [1,2]
+>>> b = copy.copy(a)   # make a shallow copy b from a here 
+>>> b.append(3)
+>>> print a
+[1, 2]
+>>> print b
+[1, 2, 3]
+
+# Difference between shallow copy and deep copy can be tricky when in complicated situation.
+>>> import copy
+>>> a = [1,2,[3,4]]
+>>> b_shallow = copy.copy(a)     # shallow copy
+>>> b_deep = copy.deepcopy(a)    # deep copy
+>>> a[2][1] = 5
+>>> print a
+[1, 2, [3, 5]]
+>>> print b_shallow
+[1, 2, [3, 5]]
+>>> print b_deep
+[1, 2, [3, 4]]
+
+#--------------------------------------------------------------------------------------------------------------
+
+
+
+
+
       
       
