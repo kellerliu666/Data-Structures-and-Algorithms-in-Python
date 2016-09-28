@@ -13,6 +13,9 @@
 <li>Chapter 2 (Object-Oriented Programming)</li>
 <ul><li><a href="https://github.com/kellerliu666/Data-Structures-and-Algorithms-in-Python/blob/master/2-Object-Oriented-Programming-Essential.py">Essential</a></li></ul>
 <ul><li><a href="https://github.com/kellerliu666/Data-Structures-and-Algorithms-in-Python/blob/master/2-Object-Oriented-Programming-Exercises.py">Exercises</a></li></ul>
+<li>Chapter 3 (Algorithm Analysis)</li>
+<ul><li><a href="https://github.com/kellerliu666/Data-Structures-and-Algorithms-in-Python/blob/master/3-Algorithm-Analysis-Essential.py">Essential</a></li></ul>
+<ul><li><a href="https://github.com/kellerliu666/Data-Structures-and-Algorithms-in-Python/blob/master/3-Algorithm-Analysis-Exercises.py">Exercises</a></li></ul>
 </ol>
 </body>
 </html>
