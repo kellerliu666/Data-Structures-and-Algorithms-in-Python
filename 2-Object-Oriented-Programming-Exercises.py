@@ -137,4 +137,71 @@ def __mul__(self, base, other = None):
     return result
 
 #--------------------------------------------------------------------------------------------------------------   
-#
+# Implement a ReversedSequenceIterator class that serves as a reverse iterator for any Python sequence type.
+class ReversedSequenceIterator:
+    def __init__(self, sequence):
+        self._seq = sequence
+        self._k = 0
+    def __iter__(self):
+        return self
+    def next(self):
+        self._k -= 1
+        if (self._k * -1) <= len(self._seq):
+            return(self._seq[self._k])
+        else:
+            raise StopIteration
+            
+#--------------------------------------------------------------------------------------------------------------   
+# Write a Python class that extends the Progression class so that each value in the progression is the absolute 
+# value of the difference between the previous two values.
+class Progression:
+    def __init__(self, start, stop):
+        self.start = start
+        self.stop = stop
+    def next_method(self):
+        self.start += 1
+    def __iter__(self):
+        return self
+    def next(self):
+        if self.start <= self.stop:
+            raise StopIteration
+        else:
+            result = self.start
+            self.next_method()   
+            return result
+class Absolute_Difference(Progression):
+    def __init__(self, start, stop, second):
+        Iterator.__init__(self, start, stop)
+        self.second = second
+    def next_method(self):
+        temp1 = self.start
+        self.start = self.second
+        temp2 = temp1 - self.second
+        if temp2 >= 0:
+            self.second = temp2
+        else:
+            self.second = temp2 * -1
+            
+#--------------------------------------------------------------------------------------------------------------   
+# Write a Python class that extends the Progression class so that each value in the progression is the square 
+# root of the previous value.
+import math
+class Progression:
+    def __init__(self, start):
+        self.start = float(start)
+    def next_method(self):
+        self.start += 1
+    def __iter__(self):
+        return self
+    def next(self):
+        result = self.start
+        self.next_method()   
+        return result
+class SquareRoot(Progression):
+    def __init__(self, start):
+        Progression.__init__(self, start)
+    def next_method(self):
+        self.start = math.sqrt(self.start)
+        
+#--------------------------------------------------------------------------------------------------------------   
+# 
