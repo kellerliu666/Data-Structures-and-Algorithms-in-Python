@@ -54,4 +54,87 @@ def make_payment(self, amount):
     self.balance −= amount
     
 #--------------------------------------------------------------------------------------------------------------   
+# Implement the mul method for the Vector class of Section 2.3.3, so that the expression u v returns a scalar 
+# that represents the dot product of the vectors.
+def __mul__(self, other):
+        '''returns a scalar that represents 
+        the dot product of the vectors'''
+        result = Vector(len(self.coords))
+        temp = 0
+        for j in range(len(self.coords)):
+            temp += self.coords[j] * other.coords[j]
+            result[j] = temp
+        return result
+
+#--------------------------------------------------------------------------------------------------------------   
+# In Vector class, if a single integer is sent, it produces a vector of that dimension with all zeros, but if a 
+# sequence of numbers is provided, it produces a vector with coordinates based on that sequence.
+def __init__(self, d):
+    '''modify __init__ function by using <isinstance> to achieve this'''
+    if isinstance(d, list):
+        self.coords = d
+    elif isinstance(d, int):
+        self.coords = [0] * d
+
+#--------------------------------------------------------------------------------------------------------------   
+# Draw a class inheritance diagram for set of classes.
+class Animal(object):
+    def __init__(self):
+        pass   
+class Goat(Animal):
+    def __init__(self, _tail):
+        Animal.__init__(self)
+        self._tail = _tail
+    def milk(self):
+        pass
+    def jump(self):
+        pass
+class Pig(Animal):
+    def __init__(self, _nose):
+        Animal.__init__(self)
+        self._nose = _nose
+    def eat(self, food):
+        self.food = food
+    def wallow(self):
+        pass
+class Horse(Animal):
+    def __init__(self, _height, _color):
+        Animal.__init__(self)
+        self._height = _height
+        self._color = _color
+    def run(self):
+        pass
+    def jump(self):
+        pass       
+class Racer(Horse):
+    def __init__(self, _height, _color):
+        Horse.__init__(self, _height, _color)
+    def race(self):
+        pass
+class Equestrian(Horse):
+    def __init__(self, _height, _color, _weight):
+        Horse.__init__(self, _height, _color)
+        self._weight = _weight
+    def trot(self):
+        pass
+    def is_trained(self):
+        pass
+    
+#--------------------------------------------------------------------------------------------------------------   
+# Give a single implementation of Vector. __mul__ that uses run-time type checking to support both syntaxes
+# u*v and u*k, where u and v designate vector instances and k represents a number.
+def __mul__(self, base, other = None):
+    '''Return multiple of two Gen class'''
+    result = Gen(len(self.coords))
+    if isinstance(base, int):
+        for j in range(len(self.coords)):
+            result[j] = self.coords[j] * base
+    else:
+        other = base
+        base = None
+        for j in range(len(self.coords)):
+            result[j] = self.coords[j] * other.coords[j]
+    return result
+
+#--------------------------------------------------------------------------------------------------------------   
 #
